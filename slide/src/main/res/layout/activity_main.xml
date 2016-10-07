@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context="com.example.yang.slide.MainActivity">
+
+
+
+    <android.support.v4.widget.DrawerLayout
+        android:id="@+id/drawerLayout_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!-- 主页面-->
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:text="我是主页面,点击进入右侧第一层 抽屉"
+                android:layout_gravity="center"
+                android:onClick="onClick"
+                android:id="@+id/button_first"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        </FrameLayout>
+
+        <!-- 左边的抽屉-->
+        <FrameLayout
+            android:id="@+id/frameLayout_slide_left"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clickable="true"
+            android:layout_gravity="left"
+            android:background="#6cea94">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="我是主页面左边抽屉"/>
+        </FrameLayout>
+
+        <!-- 右边的抽屉-->
+        <android.support.v4.widget.DrawerLayout
+            android:id="@+id/drawerLayout_slide_right"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clickable="true"
+            android:layout_gravity="right"
+            android:background="#e86cea">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#6c92ea">
+
+                <Button
+                    android:text="右边第一层抽屉内的主页面,点击进入第二层抽屉"
+                    android:layout_gravity="center"
+                    android:onClick="onClick"
+                    android:id="@+id/button_second"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            </FrameLayout>
+            <FrameLayout
+                android:id="@+id/frameLayou_right_in"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:clickable="true"
+                android:layout_gravity="right"
+                android:background="#ef136f">
+
+                <TextView
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="右边第二层抽屉"/>
+            </FrameLayout>
+
+        </android.support.v4.widget.DrawerLayout>
+
+
+    </android.support.v4.widget.DrawerLayout>
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toobar_main"
+        android:background="@color/colorPrimary"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </android.support.v7.widget.Toolbar>
+
+</FrameLayout>
