@@ -36,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
         toolbar.setLogo(R.mipmap.ic_launcher);
 
         //这个是左边抽屉打开的开关
-        toggle=new ActionBarDrawerToggle(this,drawerLayout,toolbar,R.string.app_name,R.string.app_name);
+        toggle=new ActionBarDrawerToggle(this,drawerLayout,toolbar, R.string.app_name, R.string.app_name);
         toggle.syncState();
         drawerLayout.addDrawerListener(toggle);
 
